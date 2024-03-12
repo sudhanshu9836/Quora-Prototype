@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing post in detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="main-head">Quora</h1>
+    <div class="box">
+        <h3 id="username"><%=post.username%></h3>
+        <p id="content"><%=post.content%></p>
+        <div style="display: flex; justify-content: space-between;">
+            <h4 id="id">id : <%=post.id%></h4>
+            <button class="back" id="show-back">Back</button>
+        </div>
+    </div>
+    <script>
+        let showBack = document.getElementById("show-back");
+        showBack.addEventListener("click", ()=>{
+        window.location.href = "http://localhost:8080/posts";
+})
+</script>
+</body>
+</html>
+

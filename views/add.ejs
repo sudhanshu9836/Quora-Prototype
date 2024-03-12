@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="add-body">
+    <main id="add-main">
+        <form action="http://localhost:8080/posts" method="post">
+            <span id="add-heading">Add post</span>
+            <input type="text" name="username" id="user-input" placeholder="Enter your username">
+            <textarea name="content" id="user-content" placeholder="Enter your content"></textarea>
+            <div class="buttons">
+                <button id="add-post" type="submit">Add post</button>
+                <button type="button" class="back" id="add-back">Back</button>
+            </div>
+        </form>
+    </main>
+    <script>
+            let addBack = document.getElementById("add-back");
+            addBack.addEventListener("click", ()=>{
+            window.location.href = "http://localhost:8080/posts";
+})
+    </script>
+</body>
+</html>

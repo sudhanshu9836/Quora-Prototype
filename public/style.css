@@ -1,0 +1,145 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+button{
+    cursor: pointer;
+}
+
+/* Home.ejs styling */
+#home-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#home-heading{
+    color: maroon;
+    font-style: italic;
+    font-size: 5em;
+    text-decoration: underline;
+    transform: translateY(-50px);
+}
+#home-button{
+    background-color: rgba(128,0,0,0.8);
+    color: white;
+    transform: scale(1.5);
+}
+
+/* Main-page.ejs */
+
+#main-header{
+    display: flex;
+    justify-content: space-between;
+}
+#add-button{
+    margin-right: 150px;
+    height: 40px;
+    width: auto;
+    transform: translate(20px, 40px);
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+#main-body{
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+#main-head{
+    color: maroon;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.box{
+    margin: 50px 0px;
+    border: 1px solid lightgrey;
+    width: 90%;
+    padding: 20px;
+    background-color: lightpink;
+}
+.buttons{
+    display: flex;
+}
+.buttons button{
+    margin: 0 20px;
+}
+@media screen and (max-width: 420px){
+    #add-button{
+        position: relative;
+        left: 100px;
+        bottom: 20px;
+    }
+}
+@media screen and (max-width: 320px){
+    #add-button{
+        height: auto;
+        width: 60px;
+    }
+}
+
+/* add.ejs styling */
+
+#add-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#add-main{
+    height: 600px;
+    width: 500px;
+    background-color: lightpink;
+    padding: 30px;
+}
+#add-main form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#user-input{
+    height: 40px;
+    width: 80%;
+}
+#user-content{
+    width: 80%;
+    height: 300px;
+}
+#add-post{
+    height: 40px;
+    width: auto;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+#add-heading{
+    font-size: 2em;
+    color: maroon;
+    font-style: italic;
+    text-decoration: underline;
+}
+.back{
+    height: 40px;
+    width: 60px;
+    padding: 10px;
+}
+
+/* Edit.ejs styling */
+
+#edit-button{
+    transform: translate(0px, -50px);
+    height: 40px;
+    width: auto;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+

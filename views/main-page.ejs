@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body id="main-body">
+    <header id="main-header">
+        <h1 id="main-head">Quora</h1>
+        <form action="http://localhost:8080/posts/new">
+            <button id="add-button">Add new post</button>
+        </form>
+    </header>
+    <%for ( let post of data){%>
+    <div class="box">
+        <h3 id="username"><%=post.username%></h3>
+        <p><%=post.content%></p>
+        <br>
+        <div class="buttons">
+            <form action="http://localhost:8080/posts/<%=post.id%>">
+                <button id="bt1">See post in detail</button>
+            </form>
+            <form method="get" action="http://localhost:8080/posts/<%=post.id%>/edit">
+                <button id="bt2">Edit post</button>
+            </form>
+            <form method="post" action="http://localhost:8080/posts/<%=post.id%>?_method=DELETE">
+                <button id="bt3">Delete post</button>
+            </form>
+        </div>
+    </div>
+    <%}%>
+    <br><br>
+    <script src="/app.js"></script>
+</body>
+</html>
